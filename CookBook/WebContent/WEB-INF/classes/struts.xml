@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="Login"
+                class="com.cookbook.user">
+                <result name="success">profile.jsp</result>
+                <result name="error">error.jsp</result>
+        </action>
+        
+         <action name="SignUp"
+                class="com.cookbook.user" method="signup">
+                <result name="success">profile.jsp</result>
+               
+        </action>
+        
+         <action name="AddRecipe"
+                class="com.cookbook.RecipeBook" method="addrecpie">
+                <result name="success">profile.jsp</result>
+                 <result name="error">error.jsp</result>
+               
+        </action>
+        
+    </package>
+</struts>
